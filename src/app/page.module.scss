@@ -1,0 +1,11 @@
+@import "@/styles/variables/spaces.scss";
+@import "@/styles/variables/fonts.scss";
+
+.home {
+  display: none;
+  font-family: $fontPrimary;
+
+  @media (max-width: 479px) {
+    display: block;
+  }
+}

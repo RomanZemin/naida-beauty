@@ -1,0 +1,128 @@
+.training-course-row {
+  $root: &;
+
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #000;
+
+  &__heading {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid #000;
+  }
+
+  &__name {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  &__trigger-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    background-color: transparent;
+    flex-shrink: 0;
+
+    &:active {
+      background-color: #fff;
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+
+    &_rotated {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__content {
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    font-size: 12px;
+  }
+
+  &__topic-container {
+    margin-bottom: 20px;
+
+    &:nth-last-child(2) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__topic-name {
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+
+  &__topic-list {
+    display: flex;
+    flex-direction: column;
+    list-style: disc;
+    padding-left: 20px;
+  }
+
+  &__price-title {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  &__price-container {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    #{$root}__price-option {
+      margin-bottom: 0;
+      margin-right: 10px;
+    }
+  }
+
+  &__price-option {
+    margin-bottom: 10px;
+
+    &_no-gap {
+      margin-right: 5px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__price-notes-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+
+  &__price-notes-option {
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
